@@ -1,6 +1,7 @@
 {
   "name": "@repo/db",
   "version": "0.0.0",
+  "type": "module",
   "dependencies": {
     "@prisma/client": "^6.10.0"
   },
@@ -11,6 +12,7 @@
     "generate": "prisma generate"
   },
   "exports": {
-    "./client": "./index.ts"
+    "./clients": "./index.js",
+    "./client": "./prisma/generated/client/index.js"
   }
 }
