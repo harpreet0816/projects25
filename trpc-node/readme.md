@@ -2,6 +2,7 @@ mkdir backend
 cd backend 
  npm i @trpc/server express zod prisma @prisma/client
 
+ npm i typescript ts-node @type/node 
  npx prisma init
 
  docker compose up d
@@ -16,3 +17,5 @@ cd backend
 
 after adding model in schema.prisma
 run npx prisma migrate dev --name init
+
+npx prisma generate
