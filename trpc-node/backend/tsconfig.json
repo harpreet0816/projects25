@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+     "module": "ESNext",  // or "ES2022"
+    "moduleResolution": "NodeNext",
+    "esModuleInterop": true,
+    "target": "ES6",
+    "outDir": "./dist"
+  },
+  "include": ["src"]
+}

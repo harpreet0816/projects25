@@ -32,3 +32,5 @@ export const urlRouter = trpc.router({
         return shortUrl
     })
 })
+
+export type UrlRouter = typeof urlRouter;
