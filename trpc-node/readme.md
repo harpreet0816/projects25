@@ -19,3 +19,8 @@ after adding model in schema.prisma
 run npx prisma migrate dev --name init
 
 npx prisma generate
+
+after setup project 
+
+create frontend using vite 
+install  npm i @trpc/client @trpc/react-query @tanstack/react-query axios 
