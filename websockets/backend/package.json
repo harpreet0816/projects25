@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "cd ./dist && nodemon native.js",
+    "dev": "cd ./dist && nodemon index.js"
   },
   "keywords": [],
   "author": "",
@@ -13,7 +16,9 @@
     "@types/express": "^5.0.3",
     "@types/ws": "^8.18.1",
     "express": "^5.1.0",
-    "typescript": "^5.8.3",
     "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
   }
 }
