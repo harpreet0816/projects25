@@ -42,3 +42,14 @@ gameManager.addMove("game1", "e5");
 
 // Log current state
 gameManager.logState();
+
+
+### PUB SUB 
+  # run a redis contain using 
+     `docker run --name redis -d -p 6379:6379 redis`
+     `docker exec -it redis /bin/bash`
+     `redis-cli`
+     # make these to in two difference clis
+     `SUBSCRIBE APPL`
+     `PUBLISH APPL 200.2`
+     # Above is to for check how subcribe and publish works
