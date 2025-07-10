@@ -7,7 +7,21 @@ interface Game {
 
 export class GameManager {
     private games: Game[] = [];
+    private static instance: GameManager;
 
+    private constructor () {
+        this.games = [];
+    }
+    static getInstance() {
+       // create a single instance of GameManager and return it 
+       if(GameManager.instance) {
+        return GameManager.instance;
+       }
+
+       GameManager.instance = new GameManager();
+
+       return GameManager.instance;
+    }
     public addGame(gameId: string) {
         const game: Game = {
             id: gameId,
@@ -34,4 +48,4 @@ export class GameManager {
     }
 }
 
-export const gameManager = new GameManager();
+export const gameManager =  GameManager.getInstance()
