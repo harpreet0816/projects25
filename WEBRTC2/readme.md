@@ -1,4 +1,37 @@
 # WebRTC Peer-to-Peer Connection Guide
+# WebRTC with WebSocket Signaling – Receiver Setup
+
+This project demonstrates a basic WebRTC setup using WebSocket for signaling between a sender and a receiver. It focuses on creating a **peer-to-peer video connection** between two clients — without needing a media server.
+
+## 📘 What is WebRTC?
+
+**WebRTC (Web Real-Time Communication)** is a technology that enables audio, video, and data sharing between browsers without requiring an intermediate server.
+
+It allows peer-to-peer communication through a few key components:
+
+- `RTCPeerConnection`: The core API used to connect two peers.
+- `MediaStream`: Represents audio/video streams.
+- `ICE (Interactive Connectivity Establishment)`: A protocol used to find the best network path between peers.
+- `SDP (Session Description Protocol)`: A text-based format to describe media connection parameters.
+
+---
+
+## 🛠 Components Used
+
+### WebSocket
+
+Used as a **signaling channel** to exchange connection metadata (SDP, ICE candidates) between peers. This is essential before a direct peer-to-peer connection can be established.
+
+---
+
+## 🔁 How the WebRTC Connection Is Made
+
+### Step-by-step Breakdown
+
+1. **Receiver Opens WebSocket Connection**
+   ```ts
+   const socket = new WebSocket("ws://localhost:8080");
+
 
 ## Connecting the Two Sides
 
