@@ -2,7 +2,7 @@ import { describe, expect, test, it } from '@jest/globals';
 import request from "supertest";
 import { app } from "../index";
 
-describe("POST /sum", () => {
+describe("POST /sum", ( ) => {
     it("should return the sum of two numbers", async () => {
         const res = await request(app).post("/sum").send({
             a: 1,
