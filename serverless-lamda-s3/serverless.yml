@@ -1,0 +1,33 @@
+service: shopify-frame-upload
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: ap-south-1
+  profile: serverlessUser 
+  environment:
+    S3_BUCKET: frames-contriwhiz
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - s3:PutObject
+          Resource: arn:aws:s3:::frames-contriwhiz/*
+
+functions:
+  uploadFrameImage:
+    handler: handler.uploadFrameImage
+    events:
+      - http:
+          path: shopify-webhook
+          method: post
+          cors: true
+  
+  uploadFrameS3Image:
+    handler: handler.uploadFrameS3Image
+    events:
+      - http:
+          path: shopify-frame-upload
+          method: post
+          cors: true
