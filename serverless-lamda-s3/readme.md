@@ -37,6 +37,8 @@ Follow these steps to connect your development environment to AWS securely.
 
 Use the Serverless CLI to store your AWS credentials locally:
 
+npm i -g serverless@3
+
 serverless config credentials --provider aws --key YOUR_ACCESS_KEY --secret YOUR_SECRET_KEY --profile myProfile
 
 
