@@ -16,6 +16,7 @@ npm install -g serverless
 ##  ✅ STEP 2: Configure AWS Credentials
 Authenticate your machine with AWS to allow deployments.
   npm i -g serverless@3
+  
 - **Configure using Serverless CLI** :
 
  serverless config credentials \
