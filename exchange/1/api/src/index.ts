@@ -130,6 +130,7 @@ function fillOrder(orderId: string, price: number, quantity: number, side: "buy"
         }
 
         console.groupCollapsed();
+        
         console.log(orderbook, "orderbook sell");
         console.log(bookWithQuantity, "bookWithQuantity sell");
         console.groupEnd();
